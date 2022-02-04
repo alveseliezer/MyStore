@@ -1,0 +1,19 @@
+
+<div class="container">  
+  <div class="row" id="row">      
+          <div class="col-sm-6" id="card_products">
+            <div class="card">
+              <div class="card-body">
+                <strong>ID:</strong> <%= @product.id %>
+                 <%= image_tag @product.image, :class=>"image_show_product" %><br>             
+                <strong>Product:</strong> <%= @product.name %><br>
+                <strong>Description:</strong> <%= @product.description %><br>
+                <strong>Price:</strong> $<%= @product.price %><br>                        
+              </div>
+                 <%= link_to 'Voltar', products_path, :class=> 'btn btn-outline-warning' %>
+            </div>
+          </div>    
+     </div>      
+  </div>
+
+

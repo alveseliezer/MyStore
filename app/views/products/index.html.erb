@@ -1,0 +1,32 @@
+
+<table class="table" id="tb_product">
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Nome</th>
+      <th>Descrição</th>
+      <th>Preço</th>
+      <th>Show</th>
+      <th>Edit</th>
+      <th>Delete</th>      
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @products.each do |p| %>
+      <tr>
+        <td><%= p.id %></td>
+        <td><%= p.name %></td>
+        <td><%= p.description %></td>
+        <td><%= p.price %></td>
+     
+        <td><%= link_to 'Show', p , :class=>"btn btn-outline-success"%></td>
+        <td><%= link_to 'Edit', edit_product_path(p), :class=>"btn btn-outline-warning"%></td>
+        <td><%= button_to 'Delete', p, method: :delete, data: {confirm: "Are you sure?"}, :class=>"btn btn-outline-danger" %></td>
+
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+

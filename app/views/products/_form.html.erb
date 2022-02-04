@@ -1,0 +1,24 @@
+
+<div class="container">  
+  <div class="row" id="row">      
+          <div class="col-sm-6" id="card_products">
+            <div class="card">
+              <div class="card-body">
+                <div class="form-group">              
+                    <%= form_for( @product , remote: true, multipart: true) do |f| %>
+                        <%= f.text_field :name, placeholder: 'Product', :class=>'form-control'%><br>
+                        <%= f.text_field :description, placeholder: 'Description', :class=>'form-control' %> <br>   
+                        <%= f.text_field :price, placeholder: 'Price', :class=>'form-control' %><br>
+                        <div class="mb-3">
+                          <%= f.file_field :image, :class => "btn btn-small btn btn-success"%><br>
+                        </div>
+                        <%= f.submit 'Criar', :class=> 'btn btn-primary'%>
+                    <% end %> 
+                    
+                     </div>
+              </div>
+            </div>
+          </div>    
+     </div>      
+  </div>
+

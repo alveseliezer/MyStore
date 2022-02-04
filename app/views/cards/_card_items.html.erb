@@ -1,0 +1,27 @@
+
+<h3 id="current_order">Current Order: <%= current_order.id%></h3>
+
+<br>
+<div class="container">  
+    <div class="row" id="row">           
+        <div class="col-sm-6" id="card_items">
+           <% @order_items.each do |item|%>  
+            <div class="card">
+              <div class="card-body">               
+                    Product Name: <%= item.product.name %> <br>
+                    Value: $ <%= item.product.price %>
+                        <%= form_for item do |f|%>
+                            <%= f.hidden_field :product_id, :value => item.product.id %>
+                            <%= f.number_field :quantity, :value => item.quantity.to_i, :class=>'form-control' %><br>
+                            <%= f.submit "Update Card", :class => "btn btn-warning" %>
+                            <%= button_to 'Remove Items', order_item_path(item), method: :delete, remote: true, :class => "btn btn-danger"%>
+                        <% end %>
+                      <h3>Subtotal: $<%= item.total %></h3>                   
+                    </div>
+                </div>
+              <br>
+            <% end %>             
+          </div>                
+        </div>   
+   </div> 
+

@@ -1,0 +1,10 @@
+<div id="total_card">
+    <%= "There #{current_order.order_items.size} item(s) chosen with a total values of $ #{current_order.subtotal}"%>
+</div>
+
+<div id="card_items">
+    <%= render 'cards/card_items'%>
+</div>
+
+
+

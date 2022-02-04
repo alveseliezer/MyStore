@@ -1,0 +1,71 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+.qtd_items{
+    width: 60px;
+}
+#car{
+    float: right;
+    margin-right: 20px;    
+    font-size: 18px;
+    font-style: bold;   
+    
+}
+#col_1{
+    margin-top: 10px;
+    border-radius: 15px;
+}
+#card_products{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+}
+#card_items{
+    margin-left: auto;
+    margin-right: auto;  
+}
+#total_card{
+    float: right;  
+    margin-top: 10px;
+    margin-right: 10px;
+    
+}
+#current_order{
+    margin-left: 10px;
+}
+.form_insert{
+    float: right;    
+}
+#tb_product{
+
+    width: 800px;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#nav-bar{
+    background-color: rgb(163, 163, 163) ;
+    margin: 10px;
+    
+}
+.card-body{
+    font-size: 18px;
+}
+
+.image_show_product{
+    float: right;     
+    width: 80px;
+    height: 150px;
+    margin-left: 5px;
+    
+}
+#id_li_menu{
+    padding-right: 20px;
+}
+#id_li_menu:hover{
+   
+    font-style: bold;
+    font-size: 20px;
+
+}
